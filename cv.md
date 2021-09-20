@@ -64,8 +64,8 @@ and started to learn all new necessary technologies to become a front-end develo
 
 <h2>Projects</h2>
 
-  - PROXYS.RU
-  - LINZI39.RU
+  - HTTP://PROXYS.RU
+  - HTTP://LINZI39.RU
 
 <h2>Education</h2> 
 
