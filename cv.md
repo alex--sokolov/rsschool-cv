@@ -32,7 +32,8 @@ and started to learn all new necessary technologies to become a front-end develo
 
 <h2>Code</h2>
 
-```export const Timer = (props: TimerPropsType) => {
+```
+export const Timer = (props: TimerPropsType) => {
        const [timerValue, setTimerValue] = useState<number>(props.seconds)
    
        useEffect(() => {
