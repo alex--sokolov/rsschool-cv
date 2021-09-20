@@ -30,8 +30,7 @@ and started to learn all new necessary technologies to become a front-end develo
 + React
 + Redux
 
-<h2>Code</h2>
-
+<h2>Code sample</h2>
 ```
 export const Timer = (props: TimerPropsType) => {
        const [timerValue, setTimerValue] = useState<number>(props.seconds)
@@ -61,12 +60,12 @@ export const Timer = (props: TimerPropsType) => {
            </>
        )
    }
+   
 ```
-
 <h2>Projects</h2>
 
-  - HTTP://PROXYS.RU
-  - HTTP://LINZI39.RU
+  - [PROXYS.RU](https://www.proxys.ru)
+  - [LINZI39.RU](https://www.linzi39.ru)
 
 <h2>Education</h2> 
 
