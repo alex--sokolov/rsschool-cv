@@ -1,210 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/arta.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script type="module" src="js/index.js"></script>
-    <title>CV -Alexander Sokolov</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/arta.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script type="module" src="index.js"></script>
+  <title>CV -Alexander Sokolov</title>
 </head>
 <body>
-<header class="header">
+<header class="header hide">
+  <div class="wrapper">
+    <span class="header__hamburger hamburger"> <span class="hamburger__line"></span> </span>
+  </div>
+  <nav class="header__navigation">
+    <ul class="navigation navigation_hamburger">
+      <li><a class="navigation__link" href="#home">Home</a></li>
+      <li><a class="navigation__link" href="#about">About me</a></li>
+      <li><a class="navigation__link" href="#skills">Skills</a></li>
+      <li><a class="navigation__link" href="#projects">Projects</a></li>
+      <li><a class="navigation__link" href="#code_sample">Code sample</a></li>
+      <li><a class="navigation__link" href="#educatuion">Educaton</a></li>
+      <li><a class="navigation__link" href="#language">Language</a></li>
+      <li><a class="navigation__link" href="#contacts">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="home hide" id="home">
+    <div class="wrapper home__wrapper">
+      <img class="home__avatar" src="./img/avatar.png" alt="Alexander Sokolov">
+      <div class="home__content">
+        <h1 class="home__title-mobile">Alexander Sokolov</h1>
+        <h1 class="home__title">Hello, Im Alex!</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="about hide" id="about">
     <div class="wrapper">
-        <span class="header__hamburger hamburger"> <span class="hamburger__line"></span> </span>
+      <h2 class="title">About me</h2>
+      <div class="about__wrapper">
+        <div class="about__content">
+          I graduated from Kaliningrad State Technical University in 2007.<br>
+          Since 2008 I’ve been having my own business. <br>It started from bringing different computer
+          services to local companies,<br>
+          design and laying of computer networks, building different websites. <br>Later it
+          transformed to internet-shop, that sells computer stuff.
+          <br>Since 2020 I decided to change my current activity, <br>and as far as I’ve been
+          developing websites for many years,<br>
+          I realized, that web development is the field, that I really have to be engaged in.<br>
+          So, I started to learn all new necessary technologies,<br>
+          and currently I'm studying on Rs.school frontend development course.<br>
+          And I plan to get hired for junior frontend position right after this course.
+        </div>
+        <!--<div class="about__video">
+          <iframe src="https://www.youtube.com/embed/N3AkSS5hXMA?controls=0"
+                  title="YouTube video player"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+          </iframe>-->
+      </div>
+    </div>
+    </div>
+  </section>
 
-        <nav class="header__navigation">
-            <ul class="navigation navigation_hamburger">
-                <li><a class="navigation__link" href="#home">Home</a></li>
-                <li><a class="navigation__link" href="#about">About me</a></li>
-                <li><a class="navigation__link" href="#skills">Skills</a></li>
-                <li><a class="navigation__link" href="#projects">Projects</a></li>
-                <li><a class="navigation__link" href="#code_sample">Code sample</a></li>
-                <li><a class="navigation__link" href="#educatuion">Educaton</a></li>
-                <li><a class="navigation__link" href="#language">Language</a></li>
-                <li><a class="navigation__link" href="#contacts">Contacts</a></li>
-            </ul>
-        </nav>
+  <section class="skills" id="skills">
+    <div class="wrapper">
+      <h2 class="title">Skills</h2>
 
-        <main>
-            <h1 class="clip">Alexander Sokolov</h1>
-            <section class="home" id="home">
-                <div class="wrapper home__wrapper">
-                    <img class="home__avatar" src="./img/avatar.jpg" alt="Alexander Sokolov">
-                    <div class="home__content">
-                        <h3 class="home__title">Alex Sokolov</h3>
-                    </div>
-                </div>
-            </section>
+      <ul>
+        <li class="skills__skill">
+          <p class="skills__skill-text">HTML 5 (80%)</p>
+          <div class="skills__skill-progressbar">
+            <span style="width: 80%" class="skills__skill-progress green"></span>
+          </div>
+        </li>
+        <li class="skills__skill">
+          <p class="skills__skill-text">CSS 3/SASS (80%)</p>
+          <div class="skills__skill-progressbar">
+            <span style="width: 80%" class="skills__skill-progress green"></span>
+          </div>
+        </li>
+        <li class="skills__skill">
+          <p class="skills__skill-text">Javascript ES6 (75%)</p>
+          <div class="skills__skill-progressbar">
+            <span style="width: 75%" class="skills__skill-progress green"></span>
+          </div>
+        </li>
+        <li class="skills__skill">
+          <p class="skills__skill-text">TypeScript (50%)</p>
+          <div class="skills__skill-progressbar">
+            <span style="width: 50%" class="skills__skill-progress yellow"></span>
+          </div>
+        </li>
+        <li class="skills__skill">
+          <p class="skills__skill-text">React (20%)</p>
+          <div class="skills__skill-progressbar">
+            <span style="width: 20%" class="skills__skill-progress red"></span>
+          </div>
+        </li>
+        <li class="skills__skill">
+          <p class="skills__skill-text">Redux (30%)</p>
+          <div class="skills__skill-progressbar">
+            <span style="width: 30%" class="skills__skill-progress red"></span>
+          </div>
+        </li>
+        <li class="skills__skill">
+          <p class="skills__skill-text">NodeJS (20%)</p>
+          <div class="skills__skill-progressbar">
+            <span style="width: 20%" class="skills__skill-progress red"></span>
+          </div>
+        </li>
+        <li class="skills__skill">
+          <p class="skills__skill-text">Git (70%)</p>
+          <div class="skills__skill-progressbar">
+            <span style="width: 70%" class="skills__skill-progress green"></span>
+          </div>
+        </li>
+        <li class="skills__skill">
+          <p class="skills__skill-text">Webpack (80%)</p>
+          <div class="skills__skill-progressbar">
+            <span style="width: 80%" class="skills__skill-progress green"></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-            <section class="about" id="about">
-                <div class="wrapper">
-                    <h2 class="title">About me</h2>
-                    <div class="about__wrapper">
-                        <div class="about__content">
-                            I graduated from Kaliningrad State Technical University in 2007.<br>
-                            Since 2008 I’ve been having my own business. <br>It started from bringing different computer
-                            services to local companies,<br>
-                            design and laying of computer networks, building different websites. <br>Later it
-                            transformed to internet-shop, that sells computer stuff.
-                            <br>Since 2020 I decided to change my current activity, <br>and as far as I’ve been
-                            developing websites for many years,<br>
-                            I realized, that I want to become a web developer.<br> So, I made my own personal learning
-                            plan
-                            and started to learn all new necessary technologies to become a front-end developer.
-                        </div>
-                        <div class="about__video">
-                            <iframe src="https://www.youtube.com/embed/N3AkSS5hXMA?controls=0"
-                                    title="YouTube video player"
-                                    loading="lazy"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <section class="projects" id="projects">
+    <div class="wrapper">
+      <h2 class="title">Projects</h2>
+      <div class="projects__container">
+      </div>
+    </div>
+  </section>
 
-            <section class="skills" id="skills">
-                <div class="wrapper">
-                    <h2 class="title">Skills</h2>
+  <section class="code_sample" id="code_sample">
+    <div class="wrapper">
+      <h2 class="title">Code sample</h2>
+      <pre>
+        <code class="typescript">
+          export const Timer = (props: TimerPropsType) => {
+                 const [timerValue, setTimerValue] = useState&lt;number&gt(props.seconds)
 
-                    <ul>
-                        <li class="skill-menu__item">
-                            <p class="skill-menu__item-text">HTML</p>
-                        </li>
-                        <li class="skill-menu__item">
-                            <p class="skill-menu__item-text">CSS/SASS</p>
-                        </li>
-                        <li class="skill-menu__item">
-                            <p class="skill-menu__item-text">JavaScript</p>
-                        </li>
-                        <li class="skill-menu__item">
-                            <p class="skill-menu__item-text">TypeScript</p>
-                        </li>
-                        <li class="skill-menu__item">
-                            <p class="skill-menu__item-text">React</p>
-                        </li>
-                        <li class="skill-menu__item">
-                            <p class="skill-menu__item-text">Redux</p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                 useEffect(() => {
+                     setTimerValue(props.seconds)
+                 }, [props.seconds])
 
-            <section class="projects" id="projects">
-                <div class="wrapper">
-                    <h2 class="title">Projects</h2>
-                    <ul>
-                        <li class="projects-menu__item">
-                            <p class="project-menu__item-text"><a href="http://proxys.ru">PROXYS.RU</a></p>
-                        </li>
+                 useEffect(() => {
+                     props.onChangeSeconds(timerValue)
+                 }, [timerValue])
 
-                        <li class="projects-menu__item">
-                            <p class="project-menu__item-text"><a href="http://linzi39.ru">LINZI39.RU</a></p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                 useEffect(() => {
+                     const intervalId = setInterval(() => {
+                         setTimerValue((prev) => prev - 1)
+                     }, 1000)
 
-            <section class="code_sample" id="code_sample">
-                <div class="wrapper">
-                    <h2 class="title">Code sample</h2>
-                    <pre><code class="typescript">
-export const Timer = (props: TimerPropsType) => {
-       const [timerValue, setTimerValue] = useState&lt;number&gt(props.seconds)
+                     return () => {
+                         clearInterval(intervalId)
+                     }
+                 }, [props.timerKey])
+                 return (
+                     <>
+                         {timerValue &&
+                         &lt;div className="timer">{timerValue}&lt;/div&gt
+                         }
+                     &lt;/&gt
+                 )
+             }
+        </code>
+      </pre>
+    </div>
+  </section>
 
-       useEffect(() => {
-           setTimerValue(props.seconds)
-       }, [props.seconds])
+  <section class="education" id="education">
+    <div class="wrapper">
+      <h2 class="title">Education</h2>
+      <div class="education__wrapper">
+        <ul>
+          <li class="edu-menu__item">
+            <p class="edu-menu__item-text">2002-2007: Kaliningrad State Technical University (speciality "Computing
+              machines, complex system and network")</p>
+          </li>
+          <li class="edu-menu__item">
+            <p class="edu-menu__item-text">2008-2020: Self education (youtube, official documentations)</p>
+          </li>
+          <li class="edu-menu__item">
+            <p class="edu-menu__item-text">2021-current: RS school</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-       useEffect(() => {
-           props.onChangeSeconds(timerValue)
-       }, [timerValue])
-
-       useEffect(() => {
-           const intervalId = setInterval(() => {
-               setTimerValue((prev) => prev - 1)
-           }, 1000)
-
-           return () => {
-               clearInterval(intervalId)
-           }
-       }, [props.timerKey])
-       return (
-           <>
-               {timerValue &&
-               &lt;div className="timer">{timerValue}&lt;/div&gt
-               }
-           &lt;/&gt
-       )
-   }
-            </code></pre>
-                </div>
-            </section>
-
-            <section class="education" id="education">
-                <div class="wrapper">
-                    <h2 class="title">Education</h2>
-                    <div class="education__wrapper">
-                        <ul>
-                            <li class="edu-menu__item">
-                                <p class="edu-menu__item-text">2002-2007: Kaliningrad State Technical University (speciality "Computing machines, complex system and network")</p>
-                            </li>
-                            <li class="edu-menu__item">
-                                <p class="edu-menu__item-text">2008-2020: Self education (youtube, official documentations)</p>
-                            </li>
-                            <li class="edu-menu__item">
-                                <p class="edu-menu__item-text">2021-current: RS school</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section class="language" id="language">
-                <div class="wrapper">
-                    <h2 class="title">Language</h2>
-                    <p class="language__content">English: <span class="home__text_colored">'B2+'</span>
-                    <span style="color: gray">(I had an experience of participating in an exchange program,
+  <section class="language" id="language">
+    <div class="wrapper">
+      <h2 class="title">Language</h2>
+      <p class="language__content">English: <span class="home__text_colored">'B2+'</span>
+        <span style="color: gray">(I had an experience of participating in an exchange program,
                             where I lived with an English family and studied English in Folkestone, Great Britain.
                                 Also I’ve been 3 times to USA, participating in student exchange program)</p>
-                </div>
-            </section>
-
-            <section class="contacts" id="contacts">
-                <div class="wrapper">
-                    <h2 class="title">#Contacts</h2>
-                    <ul>
-                        <li class="contacts-menu__item">
-                            <p class="contacts-menu__item-text">github: <a href="https://github.com/alex--sokolov">alex--sokolov</a></p>
-                        </li>
-                        <li class="contacts-menu__item">
-                            <p class="contacts-menu__item-text">e-mail: <a href="mailto:thorpe.nulled@gmail.com">thorpe.nulled@gmail.com</a></p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </main>
-
-
-        <footer class="footer">
-            <div class="wrapper footer__wrapper">
-                <a href="https://github.com/alex--sokolov" target="_blank">
-                    <img class="footer__img" src="./img/git.png" alt="github">
-                </a>
-                <a href="https://rs.school/" target="_blank">
-                    <img class="footer__img footer__img-rs" src="./img/rs_school_js.svg" alt="RS_school">
-                </a>
-            </div>
-        </footer>
-
     </div>
-</header>
+  </section>
+
+  <section class="contacts" id="contacts">
+    <div class="wrapper">
+      <h2 class="title">#Contacts</h2>
+      <ul>
+        <li class="contacts-menu__item">
+          <p class="contacts-menu__item-text">github: <a href="https://github.com/alex--sokolov">alex--sokolov</a>
+          </p>
+        </li>
+        <li class="contacts-menu__item">
+          <p class="contacts-menu__item-text">cellphone: <a href="tel:+375296555790">+375296555790</a>
+          </p>
+        </li>
+        <li class="contacts-menu__item">
+          <p class="contacts-menu__item-text">e-mail: <a
+              href="mailto:thorpe.nulled@gmail.com">thorpe.nulled@gmail.com</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrapper footer__wrapper">
+    <a href="https://github.com/alex--sokolov" target="_blank">
+      <img class="footer__img" src="./img/git.png" alt="github">
+    </a>
+    <a href="https://rs.school/" target="_blank">
+      <img class="footer__img footer__img-rs" src="./img/rs_school_js.svg" alt="RS_school">
+    </a>
+  </div>
+</footer>
 </body>
 </html>

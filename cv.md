@@ -71,7 +71,7 @@ export const Timer = (props: TimerPropsType) => {
 
 Period of study | Institution name
 ------------ | -------------
-2002-2007 | Kaliningrad State Technical University (speciality: computing machines, complex system and network)
+2002-2007 | Kaliningrad State Technical University (speciality: computing machines, complex system and networks)
 2008-2020 | Self education (youtube, official documentations)
 2021 | RS school
     
