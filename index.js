@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM is loaded.');
 
   const header = document.querySelector('.header');
   const home = document.querySelector('.home');
@@ -164,7 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (y > 800 && isY800) {
         isY800 = false;
-        console.log(projectFromLeft);
         const leftArray = Array.from(projectFromLeft);
         const rightArray = Array.from(projectFromRight);
 
