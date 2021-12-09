@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactsEl = document.getElementById('contacts');
   const linksEl = document.querySelectorAll('.navigation__link');
   const projectsContainer = document.querySelector('.projects__container');
+  const rsSchoolEl = document.querySelector('.footer__img-rs');
   (async () => {
     const res = await fetch('./projects/projects.json');
     const data = await res.json();
@@ -31,16 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
                   </a>
                   <div class="projects__project-info">
                     <div class="projects__project-description">
-                      Type: ${data[index].description}
+                      <span class="projects__project-param"><strong>Description</strong>:</span> ${data[index].description}
                     </div>
                     <div class="projects__project-stack">
-                      Stack: ${data[index].stack}
+                      <span class="projects__project-param"><strong>Stack</strong>:</span> ${data[index].stack}
                     </div>
-                    <div class="projects__project-data">
-                      Data: ${data[index].year} / ${data[index].month}
+                    <div class="projects__project-date">
+                      <span class="projects__project-param"><strong>Date</strong>:</span> ${data[index].year} / ${data[index].month}
                     </div>
                     <div class="projects__project-provider">
-                     Provider: ${data[index].provider}
+                     <span class="projects__project-param"><strong>Task provider</strong>:</span> 
+                     <a href="${data[index].provider_url}">${data[index].provider}</a>
                     </div>
                   </div>
                 </div>
@@ -50,8 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
   const projectFromLeft = document.getElementsByClassName('left');
   const projectFromRight = document.getElementsByClassName('right');
-  console.log(projectFromLeft);
-  console.log(projectFromRight);
+  const projectImgEl = document.getElementsByClassName('projects__project-img');
 
   linksEl.forEach(link => {
     link.addEventListener('click', () => {
@@ -98,6 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }, aboutDelay);
   }
 
+
+
+
   let isY800 = true;
 
   function scrollShowUp() {
@@ -116,18 +120,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
     if (htmlWidth >= 670) {
-      console.log(y);
       if (y > 200) {
         skillsEl.classList.add('from-left');
       }
 
       if (y > 800 && isY800) {
         isY800 = false;
+
         const leftArray = Array.from(projectFromLeft);
         const rightArray = Array.from(projectFromRight);
 
         function loopIt(i, arr, direction, delay) {
-          console.log(delay);
           setTimeout(function () {
             if (direction === 'left') {
               arr[i].classList.add('from-left');
@@ -144,6 +147,11 @@ document.addEventListener('DOMContentLoaded', () => {
         loopIt(0, leftArray, 'left', 0);
         loopIt(0, rightArray, 'right', 0);
 
+        const projectImg = Array.from(projectImgEl);
+        projectImg.forEach((el) => {
+          el.addEventListener('mouseover', () => { el.classList.add('active') });
+          el.addEventListener('mouseout', () => { el.classList.remove('active') });
+        })
 
       }
 
@@ -160,8 +168,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (y > 3600) {
         contactsEl.classList.add('from-scale');
       }
+      if (y > 3800) {
+        rsSchoolEl.classList.add('rotateRS');
+        setTimeout(() => rsSchoolEl.classList.remove('rotateRS'), 2000);
+      }
     }
   }
 
-
+  rsSchoolEl.addEventListener('mouseover', () => rsSchoolEl.classList.add('rotateRS'))
+  rsSchoolEl.addEventListener('mouseout', () => rsSchoolEl.classList.remove('rotateRS'))
 });
