@@ -1,0 +1,56 @@
+[
+  {
+    "title": "HTML",
+    "id": "html",
+    "level": 80,
+    "num": 1
+  },
+  {
+    "title": "CSS 3/SASS",
+    "id": "css",
+    "level": 80,
+    "num": 1
+  },
+  {
+    "title": "Javascript ES6",
+    "id": "js",
+    "level": 75,
+    "num": 1
+  },
+  {
+    "title": "TypeScript",
+    "id": "ts",
+    "level": 50,
+    "num": 1
+  },
+  {
+    "title": "ReactJS",
+    "id": "react",
+    "level": 20,
+    "num": 1
+  },
+  {
+    "title": "Redux",
+    "id": "redux",
+    "level": 30,
+    "num": 1
+  },
+  {
+    "title": "NodeJS",
+    "id": "node",
+    "level": 20,
+    "num": 1
+  },
+  {
+    "title": "Git",
+    "id": "git",
+    "level": 70,
+    "num": 1
+  },
+  {
+    "title": "Webpack",
+    "id": "webpack",
+    "level": 80,
+    "num": 1
+  }
+]

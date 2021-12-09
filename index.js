@@ -16,19 +16,52 @@ document.addEventListener('DOMContentLoaded', () => {
   const linksEl = document.querySelectorAll('.navigation__link');
   const projectsContainer = document.querySelector('.projects__container');
   const rsSchoolEl = document.querySelector('.footer__img-rs');
+  const skillsContainerEl = document.getElementById('skills-list');
+
+  const levels = [];
+
+  (async () => {
+    const res = await fetch('./skills/skills.json');
+    const data = await res.json();
+    const template = data.map((el, index) => {
+      let classBg = 'green';
+      if (data[index].level < 70){
+        classBg = data[index].level < 36 ? 'red' : 'yellow'
+      };
+
+      levels.push({
+        'id': data[index].id,
+        'level': data[index].level,
+        }
+      );
+
+      return `<li class="skills__skill">
+                <p class="skills__skill-text">${data[index].title} (${data[index].level}%)</p>
+                <div class="skills__skill-progressbar">
+                  <span id="skill-${data[index].id}" class="skills__skill-progress ${classBg} start-skill"></span>
+                </div>
+              </li>`
+    });
+    skillsContainerEl.innerHTML = template.join('');
+  })();
+
+
+
+
+
   (async () => {
     const res = await fetch('./projects/projects.json');
     const data = await res.json();
     const template = data.map((el, index) => {
       const side = data[index].num % 2 === 0 ? 'left' : 'right';
-      return `<div class='projects__project ${side}'>
-                <div class='projects__project-title'>
+      return `<div class="projects__project ${side}">
+                <div class="projects__project-title"'">
                    ${data[index].title}
                 </div>
                 <div class="projects__project-container">
-                  <a href='${data[index].link}' class='projects__project-img_link'>
-                     <img src='projects/img/${data[index].image}' 
-                     alt='${data[index].title}' class='projects__project-img' />
+                  <a href="${data[index].link}" class="projects__project-img_link" target="_blank">
+                     <img src="projects/img/${data[index].image}" 
+                     alt="${data[index].title}" class="projects__project-img" />
                   </a>
                   <div class="projects__project-info">
                     <div class="projects__project-description">
@@ -119,11 +152,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (y > 200) {
         skillsEl.classList.add('from-left');
+
+        levels.forEach((el) => {
+          setTimeout(() => {
+            document.getElementById(`skill-${el.id}`).classList.add(`skills-${el.level}`);
+            document.getElementById(`skill-${el.id}`).classList.remove('start-skill');
+          }, 1500);
+        })
+
       }
 
       if (y > 800 && isY800) {
         isY800 = false;
-
+        console.log(projectFromLeft);
         const leftArray = Array.from(projectFromLeft);
         const rightArray = Array.from(projectFromRight);
 
@@ -173,4 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   rsSchoolEl.addEventListener('mouseover', () => rsSchoolEl.classList.add('rotateRS'))
   rsSchoolEl.addEventListener('mouseout', () => rsSchoolEl.classList.remove('rotateRS'))
+
+
+
 });

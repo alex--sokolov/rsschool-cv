@@ -13,7 +13,7 @@
   --color-gray: #999;
   --color-progress: #CCC;
   --color-green: limegreen;
-  --color-red: #CC0000;
+  --color-red: crimson;
   --color-yellow: goldenrod;
 }
 
@@ -611,10 +611,12 @@ iframe {
   .skills__skill {
     padding-left: 0px;
     flex-direction: column;
+    margin-bottom: 25px;
   }
 
   .skills__skill-text {
     margin-bottom: 10px;
+    text-align: center;
   }
 
   .projects__project-img_link{
@@ -759,4 +761,122 @@ iframe {
 }
 .rotateRS{
   animation: rotation 2s;
+}
+
+
+@keyframes skills80 {
+  from {
+    width: 0%;
+    background: var(--color-red);
+  }
+  40%{
+    width: 36%;
+    background: var(--color-yellow);
+  }
+  70%{
+    width: 69%;
+    background: var(--color-yellow);
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes skills75 {
+  from {
+    width: 0%;
+    background: var(--color-red);
+  }
+  40%{
+    width: 36%;
+    background: var(--color-yellow);
+  }
+  70%{
+    width: 69%;
+    background: var(--color-yellow);
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes skills70 {
+  from {
+    width: 0%;
+    background: var(--color-red);
+  }
+  40%{
+    width: 36%;
+    background: var(--color-yellow);
+  }
+  70%{
+    width: 69%;
+    background: var(--color-yellow);
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes skills50 {
+  from {
+    width: 0%;
+    background: var(--color-red);
+  }
+  40%{
+    width: 36%;
+    background: var(--color-yellow);
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes skills30 {
+  from {
+    width: 0%;
+    background: var(--color-red);
+  }
+  to {
+    width: 30%;
+  }
+}
+@keyframes skills20 {
+  from {
+    width: 0%;
+    background: var(--color-red);
+  }
+  to {
+    width: 20%;
+  }
+}
+
+.start-skill{
+  width: 0%;
+  background: var(--color-red);
+}
+
+.skills-80 {
+  animation: linear skills80 1.25s;
+  width: 80%;
+}
+
+.skills-75 {
+  animation: linear skills75 1.25s;
+  width: 75%;
+}
+.skills-70 {
+  animation: linear skills70 1.25s;
+  width: 70%;
+}
+.skills-50 {
+  animation: linear skills50 1.25s;
+  width: 50%;
+}
+.skills-30 {
+  animation: linear skills30 1.25s;
+  width: 30%;
+}
+.skills-20 {
+  animation: linear skills20 1.25s;
+  width: 20%;
 }
