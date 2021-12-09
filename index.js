@@ -107,19 +107,16 @@ document.addEventListener('DOMContentLoaded', () => {
   function scrollShowUp() {
     let y = window.scrollY;
     const htmlWidth = document.documentElement.clientWidth;
-    console.log(window.innerHeight);
     if (window.innerHeight > 3000) {
-      console.log('fsfsd')
       setTimeout(() => skillsEl.classList.add('from-left'), 3500);
       setTimeout(() => projectsEl.classList.add('from-right'), 4500);
       setTimeout(() => codeSampleEl.classList.add('from-scale'), 5500);
-      ;
       setTimeout(() => educationEl.classList.add('appear-from-top'), 6500);
-      setTimeout(() => languageEl.classList.add('appear-from-bottom'), 7500);
+      setTimeout(() => languageEl.classList.add('appear-from-top'), 7500);
       setTimeout(() => contactsEl.classList.add('from-scale'), 8500);
 
     }
-    if (htmlWidth >= 670) {
+
       if (y > 200) {
         skillsEl.classList.add('from-left');
       }
@@ -173,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => rsSchoolEl.classList.remove('rotateRS'), 2000);
       }
     }
-  }
 
   rsSchoolEl.addEventListener('mouseover', () => rsSchoolEl.classList.add('rotateRS'))
   rsSchoolEl.addEventListener('mouseout', () => rsSchoolEl.classList.remove('rotateRS'))
