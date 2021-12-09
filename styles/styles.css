@@ -187,11 +187,15 @@ body {
   line-height: 59px;
   color: var(--color-main);
   width: 100%;
-  margin-left: 53%;
 }
 
 .home__title-mobile {
   display: none;
+}
+
+.home__title-greetings{
+  margin-top: 50px;
+  color: darkgoldenrod;
 }
 
 .home__information {
