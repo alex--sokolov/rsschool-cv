@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  hljs.initHighlightingOnLoad();
 
   const header = document.querySelector('.header');
   const home = document.querySelector('.home');
