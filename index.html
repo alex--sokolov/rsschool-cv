@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="img/favicon/manifest.json">
+  <!--  <link rel="manifest" href="img/favicon/manifest.json">-->
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js" defer></script>
@@ -45,7 +45,7 @@
         <h1 class="home__title">
           Hello, I'm Alex!
           <div class="home__title-greetings">
-            <i>I'm willing to become a great frontend developer</i>
+            <i>And I'm Frontend Web Developer</i>
           </div>
         </h1>
       </div>
@@ -57,17 +57,23 @@
       <h2 class="title">About me</h2>
       <div class="about__wrapper">
         <div class="about__content">
-          I graduated from Kaliningrad State Technical University in 2007.<br>
-          Since 2008 I’ve been having my own business. <br>It started from bringing different computer
-          services to local companies,<br>
-          design and laying of computer networks, building different websites. <br>Later it
-          transformed to internet-shop, that sells computer stuff.
-          <br>In 2020 I decided to change my activity, <br>and since I’ve been
-          creating websites from time to time for years,<br>
-          I realized, that web development is the field, that I really have to be engaged in.<br>
-          So, I started to learn all new necessary technologies,<br>
-          and currently I'm studying on Rs.school frontend development course.<br>
-          And I plan to get hired for junior frontend position right after this course.
+          - currently I'm looking for a job as a Front-end developer in IT-company<br/>
+          - currently I'm studying NodeJS in RSSchool<br/>
+          - currently I'm developing SPA using React as a freelancer<br/>
+          - have finished RSSchool Angular Course<br/>
+          - have finished RSSchool JavaScript Course<br/>
+          - like web development (many years of experience, using php, mysql, CMS ModX, CS-cart etc)<br/>
+          - always want to learn new technologies<br/>
+          - team player<br/>
+          - have got a higher technical education (speciality: computer science, systems and networks,
+          graduated from Kaliningrad State Technical University).<br/>
+          - was an owner of Internet-shop, that cells computer-stuff<br/>
+          - candidate for the Master of Sports in swimming<br/>
+          - have an upper-intermediate level of English
+          <!--                          (studied with personal native-speaking teacher for 2 years, -->
+          <!--                          participated in English Language Program in Folkstone, Great Britain for 1 month, -->
+          <!--                          participated 3 times in students Work and Travel Program in USA, -->
+          <!--                          was living in center of Manhatten for six months)-->
         </div>
         <!--<div class="about__video">
           <iframe src="https://www.youtube.com/embed/N3AkSS5hXMA?controls=0"
@@ -102,39 +108,69 @@
       <h2 class="title">Code sample</h2>
       <pre>
         <code class="typescript">
-          export const Timer = (props: TimerPropsType) => {
-                 const [timerValue, setTimerValue] = useState&lt;number&gt(props.seconds)
-
-                 useEffect(() => {
-                     setTimerValue(props.seconds)
-                 }, [props.seconds])
-
-                 useEffect(() => {
-                     props.onChangeSeconds(timerValue)
-                 }, [timerValue])
-
-                 useEffect(() => {
-                     const intervalId = setInterval(() => {
-                         setTimerValue((prev) => prev - 1)
-                     }, 1000)
-
-                     return () => {
-                         clearInterval(intervalId)
-                     }
-                 }, [props.timerKey])
-                 return (
-                     <>
-                         {timerValue &&
-                         &lt;div className="timer">{timerValue}&lt;/div&gt
-                         }
-                     &lt;/&gt
-                 )
-             }
+          DeleteUserBoards = createEffect(() => {
+            return this.actions$.pipe(
+              ofType(UserActions.DeleteUserBoards),
+              switchMap(({ boardsIds }) => {
+                return this.apiService.getBoards$().pipe(
+                  switchMap((boardsAll: BoardModel[]) => {
+                    const userId = this.authService.getAuthInfo()?.id;
+                    const boardsMy = userId
+                      ? boardsAll.filter(board => JSON.parse(board.title).users[0] === userId)
+                      : [];
+                    const streamsBoards = boardsMy.map((board: BoardModel) => {
+                      return this.apiService.deleteBoard$(board.id).pipe(
+                        map(() => of(UserActions.DeleteUserBoardsSuccess())),
+                        catchError(() => of(UserActions.DeleteUserBoardsFailed())),
+                      );
+                    });
+                    return forkJoin(streamsBoards).pipe(
+                      map(() => {
+                        return UserActions.DeleteUserBoardsSuccess();
+                      }),
+                      catchError(() => of(UserActions.DeleteUserBoardsFailed())),
+                    );
+                  }),
+                );
+              }),
+            );
+          });
         </code>
+
+
       </pre>
     </div>
   </section>
+  <!--        <code class="typescript">-->
+  <!--          export const Timer = (props: TimerPropsType) => {-->
+  <!--                 const [timerValue, setTimerValue] = useState&lt;number&gt(props.seconds)-->
 
+  <!--                 useEffect(() => {-->
+  <!--                     setTimerValue(props.seconds)-->
+  <!--                 }, [props.seconds])-->
+
+  <!--                 useEffect(() => {-->
+  <!--                     props.onChangeSeconds(timerValue)-->
+  <!--                 }, [timerValue])-->
+
+  <!--                 useEffect(() => {-->
+  <!--                     const intervalId = setInterval(() => {-->
+  <!--                         setTimerValue((prev) => prev - 1)-->
+  <!--                     }, 1000)-->
+
+  <!--                     return () => {-->
+  <!--                         clearInterval(intervalId)-->
+  <!--                     }-->
+  <!--                 }, [props.timerKey])-->
+  <!--                 return (-->
+  <!--                     <>-->
+  <!--                         {timerValue &&-->
+  <!--                         &lt;div className="timer">{timerValue}&lt;/div&gt-->
+  <!--                         }-->
+  <!--                     &lt;/&gt-->
+  <!--                 )-->
+  <!--             }-->
+  <!--        </code>-->
   <section class="education" id="education">
     <div class="wrapper">
       <h2 class="title">Education</h2>

@@ -1,29 +1,43 @@
 [
+
   {
-    "title": "Louvre",
-    "link": "https://rolling-scopes-school.github.io/alex--sokolov-JSFE2021Q3/museum-dom/",
-    "description": "Landing page for museum Louvre",
+    "title": "Retouchclub",
+    "link": "https://easyschool.retouchclub.com/",
+    "description": "Online course of commercial retouching",
     "type": "SPA",
-    "image": "louvre.png",
-    "stack": "js, css3/scss, html5",
-    "month": 10,
-    "year": 2021,
-    "provider": "RsSchool",
-    "provider_url": "https://rs.school",
+    "image": "retouchclub.png",
+    "stack": "react, typescript, framer motion, scss, html5, instagram API",
+    "month": 5,
+    "year": 2022,
+    "provider": "",
+    "provider_url": "",
     "num": 1
   },
   {
-    "title": "Momentum",
-    "link": "https://rolling-scopes-school.github.io/alex--sokolov-JSFE2021Q3/momentum/",
-    "image": "momentum.png",
-    "description": "Personal dashboard featuring music, weather, time and inspiration.",
+    "title": "RS Lang",
+    "link": "https://alex--sokolov.github.io/rslang/",
+    "description": "Web application for learning English",
     "type": "SPA",
-    "stack": "js, css3/scss, html5, webpack",
-    "month": 10,
-    "year": 2021,
+    "image": "rslang.png",
+    "stack": "typescript, scss, html5, circular-progress-bar, webpack, eslint, prettier",
+    "month": 2,
+    "year": 2022,
     "provider": "RsSchool",
     "provider_url": "https://rs.school",
     "num": 2
+  },
+  {
+    "title": "Art-quiz",
+    "link": "https://rolling-scopes-school.github.io/alex--sokolov-JSFE2021Q3/art-quiz/",
+    "image": "art-quiz.png",
+    "description": "Quiz about great artists and their works",
+    "type": "SPA",
+    "stack": "js, css3/scss, html5, webpack",
+    "month": 11,
+    "year": 2021,
+    "provider": "RsSchool",
+    "provider_url": "https://rs.school",
+    "num": 3
   },
   {
     "title": "CssMemSlider",
@@ -36,19 +50,32 @@
     "year": 2021,
     "provider": "RsSchool",
     "provider_url": "https://rs.school",
-    "num": 3
+    "num": 4
   },
   {
-    "title": "Art-quiz",
-    "link": "https://rolling-scopes-school.github.io/alex--sokolov-JSFE2021Q3/art-quiz/",
-    "image": "art-quiz.jpg",
-    "description": "Quiz about great artists and their works",
+    "title": "Momentum",
+    "link": "https://rolling-scopes-school.github.io/alex--sokolov-JSFE2021Q3/momentum/",
+    "image": "momentum.png",
+    "description": "Personal dashboard featuring music, weather, time and inspiration.",
     "type": "SPA",
     "stack": "js, css3/scss, html5, webpack",
-    "month": 11,
+    "month": 10,
     "year": 2021,
     "provider": "RsSchool",
     "provider_url": "https://rs.school",
-    "num": 4
+    "num": 5
+  },
+  {
+    "title": "Louvre",
+    "link": "https://rolling-scopes-school.github.io/alex--sokolov-JSFE2021Q3/museum-dom/",
+    "description": "Landing page for museum Louvre",
+    "type": "SPA",
+    "image": "louvre.png",
+    "stack": "js, css3/scss, html5",
+    "month": 10,
+    "year": 2021,
+    "provider": "RsSchool",
+    "provider_url": "https://rs.school",
+    "num": 6
   }
 ]

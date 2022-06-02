@@ -20,24 +20,60 @@
   {
     "title": "TypeScript",
     "id": "ts",
-    "level": 50,
+    "level": 75,
     "num": 1
   },
   {
     "title": "ReactJS",
     "id": "react",
-    "level": 20,
+    "level": 70,
     "num": 1
   },
   {
     "title": "Redux",
     "id": "redux",
-    "level": 30,
+    "level": 75,
+    "num": 1
+  },
+  {
+    "title": "Framer motion",
+    "id": "framer-motion",
+    "level": 50,
+    "num": 1
+  },
+  {
+    "title": "Angular",
+    "id": "angular",
+    "level": 70,
+    "num": 1
+  },
+  {
+    "title": "RxJs",
+    "id": "rxjs",
+    "level": 70,
+    "num": 1
+  },
+  {
+    "title": "NgRx",
+    "id": "ngrx",
+    "level": 75,
+    "num": 1
+  },
+  {
+    "title": "Postman/Swagger",
+    "id": "postman-swagger",
+    "level": 80,
     "num": 1
   },
   {
     "title": "NodeJS",
     "id": "node",
+    "level": 20,
+    "num": 1
+  },
+  {
+    "title": "Docker",
+    "id": "docker",
     "level": 20,
     "num": 1
   },
