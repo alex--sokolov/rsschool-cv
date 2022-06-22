@@ -899,6 +899,11 @@ iframe {
   width: 50%;
 }
 
+.skills-40 {
+  animation: linear skills30 1.25s;
+  width: 40%;
+}
+
 .skills-30 {
   animation: linear skills30 1.25s;
   width: 30%;
