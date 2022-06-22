@@ -26,9 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const template = data.map((el, index) => {
       let classBg = 'green';
       if (data[index].level < 70) {
-        classBg = data[index].level < 36 ? 'red' : 'yellow'
+        classBg = data[index].level < 36 ? 'red' : 'yellow';
       }
-      ;
 
       levels.push({
           'id': data[index].id,
@@ -74,16 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="projects__project-date">
                       <span class="projects__project-param"><strong>Date</strong>:</span> ${data[index].year} / ${data[index].month}
                     </div>
-                    <div class="projects__project-provider">
-                     <span class="projects__project-param"><strong>Task provider</strong>:</span> 
-                     <a href="${data[index].provider_url}">${data[index].provider}</a>
-                    </div>
                   </div>
                 </div>
               </div>`
     });
     projectsContainer.innerHTML = template.join('');
   })();
+  // <div className="projects__project-provider">
+  //   <span className="projects__project-param"><strong>Task provider</strong>:</span>
+  //   <a href="${data[index].provider_url}">${data[index].provider}</a>
+  // </div>
+
   const projectFromLeft = document.getElementsByClassName('left');
   const projectFromRight = document.getElementsByClassName('right');
   const projectImgEl = document.getElementsByClassName('projects__project-img');
@@ -133,11 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }, aboutDelay);
   }
 
-
   let isY800 = true;
 
   function scrollShowUp() {
     let y = window.scrollY;
+    console.log(y);
     const htmlWidth = document.documentElement.clientWidth;
     if (window.innerHeight > 3000) {
       setTimeout(() => skillsEl.classList.add('from-left'), 3500);
@@ -146,7 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => educationEl.classList.add('appear-from-top'), 6500);
       setTimeout(() => languageEl.classList.add('appear-from-top'), 7500);
       setTimeout(() => contactsEl.classList.add('from-scale'), 8500);
-
     }
 
     const leftArray = Array.from(projectFromLeft);
@@ -162,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
           arr[i].classList.add('from-right');
           arr[i].classList.remove('right');
         }
-        if (i < arr.length - 1) loopIt(i + 1, arr, direction, delay + 2000)
+        if (i < arr.length - 1) loopIt(i + 1, arr, direction, delay + 1000)
       }, delay);
     }
 
@@ -177,6 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function projectsAnimation() {
+
       isY800 = false;
       loopIt(0, leftArray, 'left', 0);
       loopIt(0, rightArray, 'right', 0);
@@ -206,20 +206,20 @@ document.addEventListener('DOMContentLoaded', () => {
         projectsAnimation();
       }
 
-      if (y > 2500) {
+      if (y > 4200) {
         codeSampleEl.classList.add('from-scale');
       }
 
-      if (y > 3100) {
+      if (y > 4800) {
         educationEl.classList.add('appear-from-top');
       }
-      if (y > 3200) {
+      if (y > 4900) {
         languageEl.classList.add('appear-from-top');
       }
-      if (y > 3300) {
+      if (y > 5000) {
         contactsEl.classList.add('from-scale');
       }
-      if (y > 3600) {
+      if (y > 5300) {
         rsSchoolAnimation();
       }
 
@@ -233,20 +233,20 @@ document.addEventListener('DOMContentLoaded', () => {
         projectsAnimation();
       }
 
-      if (y > 3600) {
+      if (y > 6400) {
         codeSampleEl.classList.add('from-scale');
       }
 
-      if (y > 4100) {
+      if (y > 6900) {
         educationEl.classList.add('appear-from-top');
       }
-      if (y > 4300) {
+      if (y > 7200) {
         languageEl.classList.add('appear-from-top');
       }
-      if (y > 4500) {
+      if (y > 7400) {
         contactsEl.classList.add('from-scale');
       }
-      if (y > 4700) {
+      if (y > 7600) {
         rsSchoolAnimation();
       }
 
