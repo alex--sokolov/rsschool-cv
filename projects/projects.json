@@ -40,13 +40,13 @@
     "num": 3
   },
   {
-    "title": "CssMemSlider",
-    "link": "https://alex--sokolov.github.io/cssMemSlider/cssMemSlider/",
-    "image": "css-mem-slider.webp",
-    "description": "Memo slider, which works just on Css",
-    "type": "Css slider",
-    "stack": "css3, html5",
-    "month": 11,
+    "title": "Christmas-task",
+    "link": "https://alex--sokolov.github.io/christmas-task/",
+    "image": "christmas-task.webp",
+    "description": "Decarate christmas-tree! It's new year time",
+    "type": "SPA",
+    "stack": "js, css3, html5",
+    "month": 12,
     "year": 2021,
     "provider": "RsSchool",
     "provider_url": "https://rs.school",
@@ -105,3 +105,5 @@
     "num": 8
   }
 ]
+
+
