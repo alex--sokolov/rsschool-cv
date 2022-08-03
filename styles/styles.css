@@ -292,13 +292,16 @@ iframe {
 
 
 .skills__skill {
+  position: relative;
   display: flex;
   align-items: center;
   height: 40px;
 }
 
 .skills__skill-text {
-  width: 180px;
+  position: absolute;
+  top: -10px;
+  width: 100%;
 }
 
 
@@ -306,9 +309,9 @@ iframe {
   height: 10px;
   position: relative;
   background: var(--color-progress);
-  width: 65%;
+  width: 100%;
   display: block;
-  margin-left: 20px;
+
 }
 
 .skills__skill-progress {
@@ -317,6 +320,7 @@ iframe {
   background: var(--color-main);
   position: relative;
   overflow: hidden;
+
 }
 
 .skills__skill-progress.green {
@@ -640,17 +644,6 @@ iframe {
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-  }
-
-  .skills__skill {
-    padding-left: 0px;
-    flex-direction: column;
-    margin-bottom: 25px;
-  }
-
-  .skills__skill-text {
-    margin-bottom: 10px;
-    text-align: center;
   }
 
   .projects__project-img_link {
